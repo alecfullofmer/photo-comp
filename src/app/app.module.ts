@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule }   from '@angular/router';
-
+import * as $ from 'jquery';
+import {KSSwiperModule} from 'angular2-swiper';
 import { AppComponent } from './app.component';
 import { PhotoViewerComponent } from './photo-viewer/photo-viewer.component';
 
@@ -14,6 +15,7 @@ import { PhotoViewerComponent } from './photo-viewer/photo-viewer.component';
   ],
   imports: [
     BrowserModule,
+    KSSwiperModule,
     FormsModule,
     HttpModule,
     RouterModule.forRoot([

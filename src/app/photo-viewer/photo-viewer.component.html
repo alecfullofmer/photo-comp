@@ -1,6 +1,12 @@
 <p>
   photo-viewer works!
 </p>
-<div class="carousel-class">
-  <img src="./temp-images/finger-1697331_1920.jpg"/>
+<div class="myslides">
+  <ks-swiper-container [options]="example1SwipeOptions">
+    <ks-swiper-slide>
+      <img src="../temp-images/finger-1697331_1920.jpg"/>
+    </ks-swiper-slide>
+  </ks-swiper-container>
+  <button (click)="movePrev()">Prev</button>
+  <button (click)="moveNext()">Next</button>
 </div>

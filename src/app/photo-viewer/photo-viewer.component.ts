@@ -1,20 +1,42 @@
-import { Component, OnInit } from '@angular/core';
-import 'slick-carousel/slick/slick';
+import { Component, ViewChild, AfterViewInit } from '@angular/core';
+import {KSSwiperContainer, KSSwiperSlide} from 'angular2-swiper';
+
+// export for others scripts to use
 
 @Component({
   selector: 'app-photo-viewer',
   templateUrl: './photo-viewer.component.html',
-  styleUrls: ['../../node_modules/jquery/jquery.js']
+  styleUrls: ['./photo-viewer.component.css']
 })
 
-
-
-export class PhotoViewerComponent implements OnInit {
+export class PhotoViewerComponent implements AfterViewInit {
   
-  constructor() {  }
+  @ViewChild(KSSwiperContainer) swiperContainer: KSSwiperContainer;
+  example1SwipeOptions: any;
+  
+  constructor() { 
+      this.example1SwipeOptions = {
+      slidesPerView: 1,
+      loop: false,
+      spaceBetween: 5
+    };
+   }
   
   ngOnInit() {
-    jQuery('.carousel-class').slick({ autoplay: false, dots: true, fade: true, arrows: false });
+    
   }
+  
+  moveNext() {
+    this.swiperContainer.swiper.slideNext();
+  }
+
+  movePrev() {
+    this.swiperContainer.swiper.slidePrev();
+  }
+
+  ngAfterViewInit() {
+    console.log(this.swiperContainer);
+  }
+
 
 }
