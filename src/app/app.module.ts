@@ -7,11 +7,13 @@ import * as $ from 'jquery';
 import {KSSwiperModule} from 'angular2-swiper';
 import { AppComponent } from './app.component';
 import { PhotoViewerComponent } from './photo-viewer/photo-viewer.component';
+import { PhotoComponent } from './photo/photo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PhotoViewerComponent
+    PhotoViewerComponent,
+    PhotoComponent
   ],
   imports: [
     BrowserModule,
