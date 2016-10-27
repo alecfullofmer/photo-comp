@@ -8,12 +8,14 @@ import {KSSwiperModule} from 'angular2-swiper';
 import { AppComponent } from './app.component';
 import { PhotoViewerComponent } from './photo-viewer/photo-viewer.component';
 import { PhotoComponent } from './photo/photo.component';
+import { PhotoUploadComponent } from './photo-upload/photo-upload.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PhotoViewerComponent,
-    PhotoComponent
+    PhotoComponent,
+    PhotoUploadComponent
   ],
   imports: [
     BrowserModule,
