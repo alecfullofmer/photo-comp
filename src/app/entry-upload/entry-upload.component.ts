@@ -2,11 +2,11 @@ import { Component, OnInit} from '@angular/core';
 import { ModalModule } from 'ng2-bootstrap/ng2-bootstrap';
 import { Entry } from '../entry';
 @Component({
-  selector: 'app-photo-upload',
-  templateUrl: './photo-upload.component.html',
-  styleUrls: ['./photo-upload.component.css']
+  selector: 'app-entry-upload',
+  templateUrl: './entry-upload.component.html',
+  styleUrls: ['./entry-upload.component.css']
 })
-export class PhotoUploadComponent implements OnInit {
+export class EntryUploadComponent implements OnInit {
 
   constructor() { }
 

@@ -1,9 +1,5 @@
-<<<<<<< Updated upstream
-import { Component, ViewContainerRef, ViewChild } from '@angular/core';
-import { PhotoUploadComponent } from './photo-upload/photo-upload.component';
-=======
+import { EntryUploadComponent } from './entry-upload/entry-upload.component';
 import { Component, ViewContainerRef } from '@angular/core';
->>>>>>> Stashed changes
 
 @Component({
   selector: 'app-root',
@@ -11,12 +7,6 @@ import { Component, ViewContainerRef } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-<<<<<<< Updated upstream
-
-=======
-  title = 'app works!';
-  
->>>>>>> Stashed changes
   private viewContainerRef: ViewContainerRef;
 
   public constructor(viewContainerRef:ViewContainerRef) {

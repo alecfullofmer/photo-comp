@@ -5,29 +5,25 @@ import { HttpModule } from '@angular/http';
 import { RouterModule }   from '@angular/router';
 import * as $ from 'jquery';
 import {KSSwiperModule} from 'angular2-swiper';
-<<<<<<< Updated upstream
+import { FileUploader } from 'ng2-file-upload';
 import { ModalModule } from 'ng2-bootstrap/ng2-bootstrap';
-=======
-import { AlertModule } from 'ng2-bootstrap/ng2-bootstrap';
->>>>>>> Stashed changes
 import { AppComponent } from './app.component';
 import { PhotoViewerComponent } from './photo-viewer/photo-viewer.component';
 import { PhotoComponent } from './photo/photo.component';
-import { PhotoUploadComponent } from './photo-upload/photo-upload.component';
+import { EntryUploadComponent } from './entry-upload/entry-upload.component';
+import { FileUploadComponentComponent } from './file-upload-component/file-upload-component.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PhotoViewerComponent,
     PhotoComponent,
-    PhotoUploadComponent
+    EntryUploadComponent,
+    FileUploadComponentComponent
   ],
   imports: [
-<<<<<<< Updated upstream
+    FileUploader,
     ModalModule,
-=======
-    AlertModule,
->>>>>>> Stashed changes
     BrowserModule,
     KSSwiperModule,
     FormsModule,
