@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { RouterModule }   from '@angular/router';
 import * as $ from 'jquery';
 import {KSSwiperModule} from 'angular2-swiper';
+import { ModalModule } from 'ng2-bootstrap/ng2-bootstrap';
 import { AppComponent } from './app.component';
 import { PhotoViewerComponent } from './photo-viewer/photo-viewer.component';
 import { PhotoComponent } from './photo/photo.component';
@@ -18,6 +19,7 @@ import { PhotoUploadComponent } from './photo-upload/photo-upload.component';
     PhotoUploadComponent
   ],
   imports: [
+    ModalModule,
     BrowserModule,
     KSSwiperModule,
     FormsModule,

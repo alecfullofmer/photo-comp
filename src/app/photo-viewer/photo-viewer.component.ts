@@ -13,7 +13,7 @@ import {PhotoComponent} from '../photo/photo.component';
 export class PhotoViewerComponent implements AfterViewInit {
   
   @ViewChild(KSSwiperContainer) swiperContainer: KSSwiperContainer;
-  example1SwipeOptions: any;
+  swipeOptions: any;
   
   photoUrls = [
     "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQSyxZ8-4wrEy3qpz3BexqdJiYQRXZDn66AbNCOYzZG2FCv_5HKjgXyFMin",
@@ -23,9 +23,9 @@ export class PhotoViewerComponent implements AfterViewInit {
   ]
   
   constructor() { 
-      this.example1SwipeOptions = {
+      this.swipeOptions = {
       slidesPerView: 1,
-      loop: false,
+      loop: true,
       spaceBetween: 5
     };
    }

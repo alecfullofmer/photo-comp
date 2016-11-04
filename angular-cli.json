@@ -15,7 +15,9 @@
       "prefix": "app",
       "mobile": false,
       "styles": [
-        "styles.css"
+        "styles.css",
+        "../node_modules/bootstrap/dist/css/bootstrap.min.css",
+        "../node_modules/swiper/dist/css/swiper.min.css"
       ],
       "scripts": ["../node_modules/jquery/dist/jquery.js", "../node_modules/slick-carousel/slick/slick.min.js"],
       "environments": {
