@@ -4,6 +4,10 @@
       <app-photo [source]="url"></app-photo>
     </ks-swiper-slide>
   </ks-swiper-container>
-  <button (click)="movePrev()">Prev</button>
-  <button (click)="moveNext()">Next</button>
+  <!-- Add Arrows -->
+  <div (click)="movePrev()" class="swiper-button-prev"></div>
+  <div (click)="moveNext()" class="swiper-button-next"></div>
 </div>
+
+
+        
