@@ -4,7 +4,7 @@
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
-    "start": "ng serve",
+    "start": "http-server",
     "lint": "tslint \"src/**/*.ts\"",
     "test": "ng test",
     "pree2e": "webdriver-manager update",
@@ -13,7 +13,9 @@
     "build:nodeserver": "ng build && cp nodeserver/* dist",
     "build:nodeserver-prod": "ng build -prod && cp nodeserver/* dist",
     "serve-build": "npm run build:nodeserver && cd dist && node index.js",
-    "serve-build-prod": "npm run build:nodeserver-prod && cd dist && node index.js"
+    "serve-build-prod": "npm run build:nodeserver-prod && cd dist && node index.js",
+    "preinstall": "npm install -g http-server",
+    "postinstall": "ng build && mv dist/* ."
   },
   "private": true,
   "dependencies": {
@@ -38,9 +40,7 @@
     "rxjs": "5.0.0-beta.12",
     "slick-carousel": "^1.6.0",
     "ts-helpers": "^1.1.1",
-    "zone.js": "^0.6.23"
-  },
-  "devDependencies": {
+    "zone.js": "^0.6.23",
     "@types/jasmine": "^2.2.30",
     "@types/jquery": "^2.0.33",
     "@types/node": "^6.0.42",
@@ -57,5 +57,8 @@
     "ts-node": "1.2.1",
     "tslint": "3.13.0",
     "typescript": "2.0.2"
+  },
+  "devDependencies": {
+    
   }
 }
