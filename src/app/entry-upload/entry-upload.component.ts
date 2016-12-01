@@ -13,7 +13,7 @@ export class EntryUploadComponent implements OnInit {
   ngOnInit() {
   }
 
-  model = new Entry('', '');
+  model = new Entry('', '', '');
   submitted = false;
   submitEntry() { this.submitted = true; alert(this.model.email + " " + this.model.instagram);}
 

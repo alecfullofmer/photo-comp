@@ -26,7 +26,6 @@ export class PhotoViewerComponent{
   private config: SwiperConfigInterface = {
     scrollbar: false,
     direction: 'horizontal',
-    pagination: true,
     prevButton: true,
     nextButton: true,
     slidesPerView: 1,

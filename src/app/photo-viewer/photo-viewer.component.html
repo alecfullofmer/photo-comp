@@ -1,7 +1,7 @@
 <div class="box-container">
   <div class="vertical-container">
     <div class="content-container">
-      <swiper-view overlay-controls [config]="config" (indexChange)="onIndexChange($event)">
+      <swiper-view overlay-controls [config]="config">
         <swiper-item *ngFor="let url of photoUrls">
           <app-photo [source]="url"></app-photo>
         </swiper-item>
