@@ -1,3 +1,6 @@
-<div>
+<div id="outer-box">
   <img class="slide-image" src="{{source}}"/>
+  <div id="inner-box">
+      <div (click)="onHeartClick()" [ngClass]="{'heart':!clicked, 'heart-clicked':clicked}"></div>
+  </div>
 </div>

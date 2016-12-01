@@ -1,4 +1,122 @@
-.slide-image {
-    height: 300px;
+/* line 3, ../sass/style.scss */
+#outer-box {
+  height: 300px;
     width: 600px;
+  display: block;
+  position: relative;
+}
+/* line 9, ../sass/style.scss */
+#outer-box img {
+  width: 600px;
+  height: 300px;
+}
+/* line 14, ../sass/style.scss */
+#outer-box #inner-box {
+  background: #bac8e0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  position: absolute;
+  padding: 0;
+  transition: opacity .5s;
+}
+/* line 25, ../sass/style.scss */
+#outer-box #inner-box p {
+  color: #fff;
+  line-height: 150px;
+  font-family: 'arial';
+  text-align: center;
+}
+/* line 34, ../sass/style.scss */
+#outer-box:hover #inner-box {
+  opacity: .9;
+  transition: opacity .5s;
+}
+#inner-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+}
+.heart:before,
+.heart:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: #fff;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0;
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+         -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+       -moz-transform-origin: 0 100%;
+        -ms-transform-origin: 0 100%;
+         -o-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+}
+.heart:after {
+    left: 0;
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+       -moz-transform-origin: 100% 100%;
+        -ms-transform-origin: 100% 100%;
+         -o-transform-origin: 100% 100%;
+            transform-origin :100% 100%;
+}
+/*post clicked styling*/
+.heart-clicked {
+    position: relative;
+    width: 100px;
+    height: 90px;
+}
+.heart-clicked:before,
+.heart-clicked:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: #FAB8BE;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0;
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+         -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+       -moz-transform-origin: 0 100%;
+        -ms-transform-origin: 0 100%;
+         -o-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+}
+.heart-clicked:after {
+    left: 0;
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+       -moz-transform-origin: 100% 100%;
+        -ms-transform-origin: 100% 100%;
+         -o-transform-origin: 100% 100%;
+            transform-origin :100% 100%;
 }

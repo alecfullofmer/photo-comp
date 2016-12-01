@@ -8,10 +8,15 @@ import { Component, OnInit, Input } from '@angular/core';
 export class PhotoComponent implements OnInit {
   
   @Input() source;
+  clicked: boolean = false;
   
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onHeartClick() {
+    this.clicked = true;
   }
 
 }
