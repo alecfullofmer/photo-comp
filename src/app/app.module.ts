@@ -13,6 +13,8 @@ import { PhotoViewerComponent } from './photo-viewer/photo-viewer.component';
 import { PhotoComponent } from './photo/photo.component';
 import { EntryUploadComponent } from './entry-upload/entry-upload.component';
 import { FileUploadComponentComponent } from './file-upload-component/file-upload-component.component';
+import { LoginComponent } from './login/login.component';
+import { FeaturedArtistComponent } from './featured-artist/featured-artist.component';
 
 const SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
@@ -26,7 +28,9 @@ const SWIPER_CONFIG: SwiperConfigInterface = {
     PhotoViewerComponent,
     PhotoComponent,
     EntryUploadComponent,
-    FileUploadComponentComponent
+    FileUploadComponentComponent,
+    LoginComponent,
+    FeaturedArtistComponent
   ],
   imports: [
     FileUploadModule,
@@ -39,6 +43,10 @@ const SWIPER_CONFIG: SwiperConfigInterface = {
       {
         path: 'photos',
         component: PhotoViewerComponent
+      },
+      {
+        path: 'featured-artist',
+        component: FeaturedArtistComponent
       },
       { path: '', redirectTo: '/photos', pathMatch: 'full' },
 ])
