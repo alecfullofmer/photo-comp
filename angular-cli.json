@@ -1,13 +1,16 @@
 {
   "project": {
-    "version": "1.0.0-beta.17",
-    "name": "photo-comp"
+    "version": "1.0.0-beta.26",
+    "name": "test-app"
   },
   "apps": [
     {
       "root": "src",
       "outDir": "dist",
-      "assets": "assets",
+      "assets": [
+        "assets",
+        "favicon.ico"
+      ],
       "index": "index.html",
       "main": "main.ts",
       "test": "test.ts",
@@ -21,16 +24,18 @@
       ],
       "scripts": ["../node_modules/jquery/dist/jquery.js", 
                   "../node_modules/slick-carousel/slick/slick.min.js",
-                  "../node_modules/swiper/dist/js/swiper.min.js"],
+                  "../node_modules/swiper/dist/js/swiper.min.js"
+      ],
       "environments": {
         "source": "environments/environment.ts",
         "dev": "environments/environment.ts",
         "prod": "environments/environment.prod.ts"
-      }
+      },
+      "packages": [
+        "node_modules/angular2-useful-swiper/lib"
+      ]
     }
   ],
-  "addons": [],
-  "packages": [],
   "e2e": {
     "protractor": {
       "config": "./protractor.conf.js"
@@ -43,6 +48,18 @@
   },
   "defaults": {
     "styleExt": "css",
-    "prefixInterfaces": false
+    "prefixInterfaces": false,
+    "inline": {
+      "style": false,
+      "template": false
+    },
+    "spec": {
+      "class": false,
+      "component": true,
+      "directive": true,
+      "module": false,
+      "pipe": true,
+      "service": true
+    }
   }
 }

@@ -4,23 +4,23 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule }   from '@angular/router';
 import * as $ from 'jquery';
-import { SwiperModule } from 'angular2-swiper-wrapper';
-import { SwiperConfigInterface } from 'angular2-swiper-wrapper';
+import { SwiperModule } from '../../node_modules/angular2-useful-swiper';
 import { FileUploadModule } from 'ng2-file-upload/ng2-file-upload';
-import { ModalModule } from 'ng2-bootstrap/ng2-bootstrap';
+import { ModalModule } from 'ng2-bootstrap';
+import { ComponentLoaderFactory } from 'ng2-bootstrap/component-loader';
 import { AppComponent } from './app.component';
 import { PhotoViewerComponent } from './photo-viewer/photo-viewer.component';
 import { PhotoComponent } from './photo/photo.component';
+
+// Imports for loading & configuring the in-memory web api
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService }  from './in-memory-data.service';
+
 import { EntryUploadComponent } from './entry-upload/entry-upload.component';
 import { FileUploadComponentComponent } from './file-upload-component/file-upload-component.component';
 import { LoginComponent } from './login/login.component';
 import { FeaturedArtistComponent } from './featured-artist/featured-artist.component';
-
-const SWIPER_CONFIG: SwiperConfigInterface = {
-  direction: 'horizontal',
-  slidesPerView: 'auto',
-  keyboardControl: true
-};
+import { PhotoService } from './photo.service'
 
 @NgModule({
   declarations: [
@@ -34,11 +34,12 @@ const SWIPER_CONFIG: SwiperConfigInterface = {
   ],
   imports: [
     FileUploadModule,
-    ModalModule,
+    ModalModule.forRoot(),
     BrowserModule,
-    SwiperModule.forRoot(SWIPER_CONFIG),
+    SwiperModule,
     FormsModule,
     HttpModule,
+    InMemoryWebApiModule.forRoot(InMemoryDataService),
     RouterModule.forRoot([
       {
         path: 'photos',
@@ -51,7 +52,7 @@ const SWIPER_CONFIG: SwiperConfigInterface = {
       { path: '', redirectTo: '/photos', pathMatch: 'full' },
 ])
   ],
-  providers: [],
+  providers: [PhotoService],
   bootstrap: [AppComponent]
 })
 
